@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import './pages/style.css';
+import about from './pages/about.js'
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div>
       {/* NavBar
           Header if needed */}
-      
+      <about/>
     </div>
   );
 }
