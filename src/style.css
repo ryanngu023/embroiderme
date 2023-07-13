@@ -54,6 +54,18 @@ code {
   height: 13rem;
 }
 
+@media (min-width: 700px) {
+  #about-header {
+    height: rem;
+    background-size: cover;
+    background-image:  linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3)
+  ), url(../src/components/pictures/cherry_blossom_extra.jpg);
+  }
+}
+
 /*This designs the titles of the about page (not header)*/
 .about-titles {
   text-align: center;
