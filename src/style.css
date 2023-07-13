@@ -12,6 +12,92 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'LibreBodoni';
+  src: url('../src/components/LibreBodoni-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BalooPaaji2';
+  src: url('../src/components/BalooPaaji2-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Start of the about page section*/
+
+/*This shapes the entriety of the about page*/
+#about-body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'BalooPaaji2';
+}
+
+/* This is where the header for the about page is styled*/
+#about-header {
+  font-family: 'LibreBodoni';
+  font-style: bold;
+  position: relative;
+  background-image:  linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3)
+  ), url(../src/components/pictures/kiki_embriodery.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 13rem;
+}
+
+/*This designs the titles of the about page (not header)*/
+.about-titles {
+  text-align: center;
+  font-family: 'LibreBodoni';
+  font-style: normal;
+}
+
+/*This section is about info with keit */
+#about-kiet-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*This designs the sizing for Kiets picture*/
+#about-kiet-pic {
+  height: 6rem;
+  border-radius: 100%;
+  margin-left: 1rem;
+}
+
+/*This is the styling for the paragraph sections*/
+.about-info-sections {
+  margin: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/*Styling of About EmbrioderMe section */
+#about-service-section {
+  background-color: #FFE1EC;
+}
+
+/*styling for divs with arrow images*/
+.about-arrows {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar section */
+
 .navbar {
   position: fixed;
   top: 0;
@@ -74,5 +160,22 @@ code {
 
 .nav-links li a {
   text-decoration: none;
-  color: #333;
+  color: white;
 }
+
+.navLink::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  color: green;
+  overflow: hidden;
+  width: 0%;
+  transition: 0.5s;
+}
+
+.navLink:hover::before {
+  width: 100%;
+}
+
