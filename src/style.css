@@ -239,3 +239,56 @@ code {
   max-width: 100%;
   height: auto;
 }
+/*This is the start of the FAQ css*/ 
+
+/*This is the basis for the faq page */
+#faq-body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'BalooPaaji2';
+}
+
+/* This designs the faq header*/
+#faq-header {
+  color: white;
+  font-family: 'LibreBodoni';
+  font-style: bold;
+  position: relative;
+  background-image:  linear-gradient(
+    0deg,
+    rgba(255, 225, 236, 0.3),
+    rgba(255, 185, 196, 0.3)),
+  url(../src/components/pictures/cherry_blossoms.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 13rem;
+}
+
+/*This designs the titles of the faq page (not header)*/
+.faq-titles {
+  text-align: center;
+  font-family: 'LibreBodoni';
+  font-style: normal;
+}
+
+/* This does the paragraph styling for the faq ordering and shipping*/
+#faq-OS-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+} 
+
+/*This designs the custom service section of the faq page*/
+#faq-custom-section {
+  background-color: #D1C3B7;
+  background-color: #D7F5D3;
+  padding: 1rem;
+}
