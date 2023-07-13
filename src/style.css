@@ -109,7 +109,6 @@ code {
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-  padding: 0 20px;
   transition: transform 0.3s ease;
 }
 
@@ -117,6 +116,7 @@ code {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  margin: 0 1rem 0 1rem;
 }
 
 .line {
@@ -131,9 +131,35 @@ code {
   margin: 0;
   position: absolute;
   top: 0;
-  height: 80vh;
+  height: 100vh;
   width: 65vw;
   z-index: 2;
+}
+
+.hidden {
+  height: 0;
+  -webkit-transition: height 0.1s linear;
+  -moz-transition: height 0.1s linear;
+  -ms-transition: height 0.1s linear;
+  -o-transition: height 0.1s linear;
+  transition: height 0.1s linear;
+}
+
+.open {
+  height: 100vh;
+  -webkit-transition: height 0.1s linear;
+  -moz-transition: height 0.1s linear;
+  -ms-transition: height 0.1s linear;
+  -o-transition: height 0.1s linear;
+  transition: height 0.1s linear;
+}
+
+.display {
+  display: none;
+}
+
+.reveal {
+  display: block;
 }
 
 .close {
@@ -158,18 +184,15 @@ code {
   padding: 1rem;
 }
 
-.nav-links li a {
+.navLink {
   text-decoration: none;
-  color: white;
+  color: blaCK;
 }
 
 .navLink::before {
   content: attr(data-text);
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  color: green;
+  color: white;
   overflow: hidden;
   width: 0%;
   transition: 0.5s;
@@ -179,3 +202,40 @@ code {
   width: 100%;
 }
 
+.navbar img {
+  margin: 0 1rem 0 1rem;
+}
+
+.cart {
+  text-align: center;
+  margin: auto;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.homeLogo {
+  text-align: center;
+  margin: auto;
+  max-width: 25px;
+  max-height: 33px;
+}
+
+/* Home Section */
+
+.homebanner {
+  position: absolute;
+  top: 5%;
+  background-image: url('../public/img/tempmodel.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 1rem;
+  max-width: 100vw;
+  min-height: 50%;
+}
+
+.homebanner img {
+  max-width: 100%;
+  height: auto;
+}
