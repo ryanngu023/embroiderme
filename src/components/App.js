@@ -4,6 +4,7 @@ import Home from './pages/home.js';
 import About from './pages/about.js';
 import FAQ from './pages/faq.js';
 import Navbar from './Navbar.js';
+import Footer from './Footer.js';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           <Route path="faq" element={<FAQ />} />
         </Routes>
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

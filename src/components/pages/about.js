@@ -5,7 +5,7 @@ import largeLeftArrow from '../pictures/arrows/longArrowDiamondLeft.png';
 import largeRightArrow from '../pictures/arrows/longArrowDiamondRight.png';
 import smallLeftArrow from '../pictures/arrows/shortArrowDiamondLeft.png';
 import smallRightArrow from '../pictures/arrows/shortArrowDiamondRight.png';
-import aboutKitty from '../pictures/kitties/aboutKitty.png'
+import aboutKitty from '../pictures/kitties/aboutKitty.png';
 
 const about = () => {
     return (
@@ -59,4 +59,4 @@ const about = () => {
     );
 };
 
-export default about
+export default about;
