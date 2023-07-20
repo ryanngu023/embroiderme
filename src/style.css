@@ -30,13 +30,13 @@ code {
 
 /*This shapes the entriety of the about page*/
 #about-body {
-  display: flex;
   flex-direction: column;
   font-family: 'BalooPaaji2';
 }
 
 /* This is where the header for the about page is styled*/
 #about-header {
+  margin-top: 4rem;
   font-family: 'LibreBodoni';
   font-style: bold;
   position: relative;
@@ -45,6 +45,7 @@ code {
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.3)
   ), url(../src/components/pictures/kiki_embriodery.jpg);
+  background-position: top 4rem center;
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
@@ -262,6 +263,7 @@ code {
 
 /* This designs the faq header*/
 #faq-header {
+  margin-top: 4rem;
   color: white;
   font-family: 'LibreBodoni';
   font-style: bold;
@@ -271,6 +273,7 @@ code {
     rgba(255, 225, 236, 0.3),
     rgba(255, 185, 196, 0.3)),
   url(../src/components/pictures/cherry_blossoms.jpg);
+  background-position: top 4rem center;
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
@@ -303,4 +306,60 @@ code {
   background-color: #D1C3B7;
   background-color: #D7F5D3;
   padding: 1rem;
+}
+
+
+/* Beginning of the size guide page styling*/
+
+/* sizeguide style for all styling */
+#sizeguide-body {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 4rem;
+  font-family: "BalooPaaji2";
+  font-size: 0.92rem;
+  background-image: url("../public/img/background\ kitties.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 120%;
+  background-position: -1rem -2rem;
+}
+
+#sizeguide-content {
+  /* styling for all the pages content in sizeguide */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../public/img/cloud-background-shadow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  height: 35rem;
+  width: 25rem;
+  background-position: center;
+}
+
+/* Styling for title of size guide */
+#sizeguide-header {
+  text-align: center;
+  font-family: 'LibreBodoni';
+}
+
+/* this gives the styling for the overall sizeguide table */
+#sizeguide-table {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  background-color: #FAF1F1;
+  border: 1px solid;
+  text-align: center;
+  
+}
+
+/* This styles the child elements of the table in size guide */
+.sizeguide-table-child {
+  border: 1px solid;
 }
