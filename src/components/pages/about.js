@@ -48,7 +48,7 @@ const about = () => {
 
                 <div class='about-arrows'>
                     <img src = {smallLeftArrow} alt= 'left diamond arrow' style = {{height: 8}}/>
-                    <img src = {aboutKitty} alt= 'cute kitty face' style = {{height: 25, padding: 10}}/>
+                    <img src = {aboutKitty} alt= 'cute kitty face' style = {{height: 50, padding: 10}}/>
                     <img src = {smallRightArrow} alt = 'right diamond arrow' style = {{height: 8}}/>
                 </div>
 
