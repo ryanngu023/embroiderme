@@ -1,10 +1,20 @@
 import React from "react";
 
+import { NavLink } from "react-router-dom";
+
+
 export default function Home(props) {
     return (
         <div id = 'home-body'>
+            <div>
             <div className='homebanner'>
-                <h1>Welcome to EmbrioderMe</h1>
+                    <h1>Welcome to EmbrioderMe</h1>
+                </div>
+        </div>
+            {/* In between Sections */}
+            <div className="othersection">
+                <h2>Others</h2>
+                <p className='relevantlinks'><NavLink to='/sizeguide'>Size Guide</NavLink></p>
             </div>
         </div>
     )
