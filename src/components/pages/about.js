@@ -14,14 +14,16 @@ const about = () => {
             <h1 id='about-header'>About us</h1>
 
             {/*This section will have explanation of kiet himself */}
-            <h2 class = 'about-titles'> Whomst am I?  </h2>
+            <div id='about-whomst-section'> 
+                <h2 class = 'about-titles'> Whomst am I?  </h2>
 
-            <div id='about-kiet-info'>
-                <img id = 'about-kiet-pic' src = {kietPic} alt="Linkedin profile image of Kiet To"/>
-                <p class ='about-info-sections'> Hi there, I am Kiet (K-eet). I am currently an ECE 
-                    student at the UW. Outside of school, I work at Vinason (a Viet restaurant in 
-                    SODO) and as a swim instructor/lifeguard for the downtown YMCA.
-                </p>
+                <div id='about-kiet-info'>
+                    <img id = 'about-kiet-pic' src = {kietPic} alt="Linkedin profile image of Kiet To"/>
+                    <p class ='about-info-sections'> Hi there, I am Kiet (K-eet). I am currently an ECE 
+                        student at the UW. Outside of school, I work at Vinason (a Viet restaurant in 
+                        SODO) and as a swim instructor/lifeguard for the downtown YMCA.
+                    </p>
+                </div>
             </div>
             
             <div id='about-service-section'>
