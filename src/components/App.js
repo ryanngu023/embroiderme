@@ -8,6 +8,8 @@ import Footer from './Footer.js';
 import SizeGuide from "./pages/sizeguide.js";
 import Shop from "./pages/shop.js";
 import Contact from "./pages/contact.js";
+import Assistance from "./Assistance.js";
+import Custom from "./Custom.js";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="sizeguide" element={<SizeGuide />} />
           <Route path="shop" element={<Shop />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="/contact/help" element={<Assistance />} />
+          <Route path="/contact/custom" element={<Custom />} />
         </Routes>
       </main>
       <footer>

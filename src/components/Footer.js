@@ -4,7 +4,7 @@ import MailButton from './MailButton.js';
 export default function Footer(props) {
     return (
         <div className='footerBackground'>
-            <img src='./img/Footer Logo.png' alt='light green circle surrounding the text, EmbroiderMe and an image of a cat peeking out with two paws up' />
+            <img src='/img/Footer Logo.png' alt='light green circle surrounding the text, EmbroiderMe and an image of a cat peeking out with two paws up' />
             <div className='footerContent'>
                 <h5>Contact Us</h5>
                 <p>support@embroiderme.com</p>
@@ -20,7 +20,7 @@ export default function Footer(props) {
                     </svg>
                     <MailButton mailto="mailto:kietto3002@gmail.com" />
                 </div>
-                <p>&copy; 2023</p>
+                <p>&copy; {(new Date().getFullYear())}</p>
             </div>
         </div>
     )

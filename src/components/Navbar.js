@@ -25,6 +25,7 @@ export default function Navbar(props) {
                         <li><NavLink data-text='About' className='navLink' onClick={handleMenuToggle} to="/about">About</NavLink></li>
                         <li><NavLink data-text='FAQ' className='navLink' onClick={handleMenuToggle} to="/faq">FAQ</NavLink></li>
                         <li><NavLink data-text='Contact' className='navLink' onClick={handleMenuToggle} to="/contact">Contact</NavLink></li>
+                        <li><NavLink data-text='SizeGuide' className='navLink' onClick={handleMenuToggle} to="/sizeguide">SizeGuide </NavLink></li>
                     </ul>
                 </div>
             </div>
