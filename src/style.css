@@ -6,16 +6,18 @@ body {
   position: relative;
   margin: 0;
   min-height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  box-sizing: border-box;
+  font-family: 'BalooPaaji2', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @font-face {
@@ -347,7 +349,7 @@ code {
   padding: 1rem;
 }
 
-/* Footer Section */
+/* Footer Section FS1 */
 
 .footerBackground {
   background-image: url('../public/img/Unionfooterback.png');
@@ -509,7 +511,7 @@ code {
   list-style: none;
   padding: 0;
   background-color: white;
-  width: 278px;
+  width: 267px;
   margin: auto;
   z-index: 10;
   font-size: 30px;
@@ -538,6 +540,34 @@ code {
   padding: 1rem;
 }
 
+/* Custom Order part of Contact Section */
+.custom_steps {
+  height: auto;
+}
+
+.custom_steps div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.custom_steps img {
+  max-width: 100px;
+  height: 120px;
+  margin: 0.5rem;
+  border: black solid 1px;
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.examples {
+  text-align: center;
+}
+
+.examples p {
+  margin: auto;
+}
+
+/* Contact Form */
 .helpform {
   margin: 1rem auto 10rem auto;
   width: 90vw;
@@ -559,9 +589,40 @@ code {
 #uploadmedia {
   border: none;
   box-shadow: none;
+  margin-bottom: 1rem;
 }
 
-#sendbutton {
-  width: 50%;
+.sendbutton {
+  width: 125px;
   background-color: #D7F5D3;
+}
+
+@media (min-width: 576px) {
+  .footerBackground {
+    background-image: url("/public/img/576footerback.png");
+    background-size: 100vw 150px;
+  }
+}
+
+@media (min-width: 992px) {
+  .textbox {
+    font-size: 28px;
+  }
+
+  .textbox h2 {
+    font-size: 40px;
+  }
+
+  .custom_steps img {
+    max-width: 280px;
+    height: 240px;
+  }
+
+  .custom_steps div {
+    margin-top: 1.5rem;
+  }
+
+  .helpform {
+    font-size: 24px;
+  }
 }
