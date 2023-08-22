@@ -19,7 +19,7 @@ export default function Home(props) {
         <div id = 'home-body'>
             <div>
                 <div className='homebanner'>
-                    <h1>Welcome to EmbrioderMe</h1>
+                    <h1>Welcome to NekoNeedlework</h1>
                 </div>
                 <div className='featured'>
                     <div className='featured-header'>
