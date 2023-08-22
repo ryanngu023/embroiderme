@@ -120,11 +120,6 @@ body::-webkit-scrollbar {
   font-size: 0.8rem;
 }
 
-/*Styling of About EmbrioderMe section */
-#about-service-section {
-  
-}
-
 /*styling for divs with arrow images*/
 .about-arrows {
   display: flex;
@@ -219,7 +214,7 @@ body::-webkit-scrollbar {
 
 .navLink {
   text-decoration: none;
-  color: blaCK;
+  color: black;
 }
 
 .navLink::before {
@@ -266,10 +261,8 @@ body::-webkit-scrollbar {
 
 /* Home Section */
 #home-body {
-  background-image: url('../public/img/background\ kitties.jpg');
   width: 100%;
   height: 100%;
-  background-repeat: repeat-y;
 }
 
 .homebanner {
@@ -279,20 +272,99 @@ body::-webkit-scrollbar {
   background-size: cover;
   text-align: center;
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 3.7rem;
   max-width: 100vw;
-  min-height: 50vh;
+  min-height: 25vh;
 }
 
-.homebanner img {
-  max-width: 100%;
-  height: auto;
+.featured {
+  background-color: #FFD7E2;
+  text-align: center;
+  padding-top: 1.5rem;
 }
 
-.relevantlinks {
-  display: block;
-  position: relative;
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.featured-header img {
+  height: 6px;
+  margin: auto;
+}
+
+.featured-header h2 {
+  margin-bottom: 0;
+}
+
+.selected {
+  display: flex;
+}
+
+.selected-carousel {
+  margin: 1rem;
+  width: 75%;
+}
+
+.item-description {
+  margin: 1rem;
+  border: black 2px solid;
+  padding: 1rem;
+}
+
+.item-name {
+  font-size: 24px;
+}
+
+.item-description button {
+  background-color: white;
+}
+
+.other-featured {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.other-featured img {
+  max-width: 30%;
+  max-height: 110px;
+  border: black solid 1px;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.all-featured {
+  margin: 1rem;
+  width: 150px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.instagram-updates {
+  margin: 1rem;
+  text-align: center;
+}
+
+.peekingcat {
+  margin-top: 1rem;
+  width: 100px;
+}
+
+.embeded {
+  width: 90vw;
+  height: 100%;
+}
+
+.gallery {
+  padding-bottom: 10rem;
+}
+
+.gallery-carousel {
+  margin: 1rem;
+}
+
 /*This is the start of the FAQ css*/ 
 
 /*This is the basis for the faq page */
@@ -599,7 +671,7 @@ body::-webkit-scrollbar {
 
 @media (min-width: 576px) {
   .footerBackground {
-    background-image: url("/public/img/576footerback.png");
+    background-image: url("/public/img/bigfooterback.png");
     background-size: 100vw 150px;
   }
 }
