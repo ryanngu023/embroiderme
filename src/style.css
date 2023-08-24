@@ -669,6 +669,42 @@ body::-webkit-scrollbar {
   background-color: #D7F5D3;
 }
 
+/* Shop Section */
+.shopitem {
+  border: black 1px solid;
+  background-color: #D6EBFF;
+  text-align: center;
+  width: 45%;
+  margin: 1rem;
+}
+
+.sortbar button {
+  border: 0;
+  background-color: transparent;
+}
+
+.sortbar p {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.itemtext {
+  padding: 0 1rem;
+}
+
+.shopitem img {
+  width: 100%;
+}
+
+.bottomtext {
+  text-align: center;
+  justify-content: space-between;
+}
+
+.bottomtext p {
+  margin: 0;
+}
+
 @media (min-width: 576px) {
   .footerBackground {
     background-image: url("/public/img/bigfooterback.png");
