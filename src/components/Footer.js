@@ -7,8 +7,7 @@ export default function Footer(props) {
             <img src='/img/Footer Logo.png' alt='light green circle surrounding the text, EmbroiderMe and an image of a cat peeking out with two paws up' />
             <div className='footerContent'>
                 <h5>Contact Us</h5>
-                <p>support@embroiderme.com</p>
-                <p>111-222-3333</p>
+                <p>nekoneedlework@gmail.com</p>
                 <div className='socialLinks'>
                     <a href='https://www.instagram.com/thefufflypenguin'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
@@ -18,7 +17,7 @@ export default function Footer(props) {
                     <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
                         <path d="M16.5458 1.58337H2.45418C2.22322 1.58337 2.00172 1.67512 1.8384 1.83844C1.67509 2.00175 1.58334 2.22325 1.58334 2.45421V16.5459C1.58334 16.6602 1.60587 16.7735 1.64963 16.8791C1.6934 16.9848 1.75754 17.0808 1.8384 17.1616C1.91927 17.2425 2.01527 17.3067 2.12092 17.3504C2.22658 17.3942 2.33982 17.4167 2.45418 17.4167H10.0383V11.2813H7.98001V8.90629H10.0383V7.12504C9.99571 6.70685 10.0451 6.28439 10.183 5.8873C10.3209 5.49021 10.544 5.1281 10.8367 4.82637C11.1294 4.52463 11.4845 4.29059 11.8772 4.14065C12.27 3.9907 12.6907 3.92849 13.11 3.95837C13.7262 3.95458 14.3421 3.9863 14.9546 4.05337V6.19087H13.6958C12.6983 6.19087 12.5083 6.66587 12.5083 7.35462V8.88254H14.8833L14.5746 11.2575H12.5083V17.4167H16.5458C16.6602 17.4167 16.7734 17.3942 16.8791 17.3504C16.9848 17.3067 17.0808 17.2425 17.1616 17.1616C17.2425 17.0808 17.3066 16.9848 17.3504 16.8791C17.3942 16.7735 17.4167 16.6602 17.4167 16.5459V2.45421C17.4167 2.33985 17.3942 2.22661 17.3504 2.12095C17.3066 2.0153 17.2425 1.9193 17.1616 1.83844C17.0808 1.75757 16.9848 1.69343 16.8791 1.64966C16.7734 1.6059 16.6602 1.58337 16.5458 1.58337Z" fill="black"/>
                     </svg>
-                    <MailButton mailto="mailto:kietto3002@gmail.com" />
+                    <MailButton mailto="mailto:nekoneedlework@gmail.com" />
                 </div>
                 <p>&copy; {(new Date().getFullYear())}</p>
             </div>

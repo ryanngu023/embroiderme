@@ -140,7 +140,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 501;
 }
 
 .sidebar {
@@ -363,6 +363,29 @@ body::-webkit-scrollbar {
 
 .gallery-carousel {
   margin: 1rem;
+}
+
+/* Homepage Desktop CSS */
+.desktopbanner {
+  background-image: url('../public/img/room.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.welcomebox {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  background-color: white;
+  font-size: 24px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*This is the start of the FAQ css*/ 
@@ -684,8 +707,19 @@ body::-webkit-scrollbar {
 }
 
 .sortbar p {
-  padding-left: 1rem;
   margin: 0;
+  padding: 0.5rem 0 0 1rem;
+}
+
+.filtersidebar {
+  margin-top: 3rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 500;
+  background-color: white;
 }
 
 .itemtext {
