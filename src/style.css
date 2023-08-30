@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500;700&display=swap');
+
 html {
   height: 100%;
 }
@@ -7,8 +11,7 @@ body {
   margin: 0;
   min-height: 100%;
   box-sizing: border-box;
-  font-family: 'BalooPaaji2', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Assistant', 'Segoe UI', 'Roboto', 'Ubuntu', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,26 +23,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-@font-face {
-  font-family: 'LibreBodoni';
-  src: url('../src/components/LibreBodoni-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'BalooPaaji2';
-  src: url('../src/components/BalooPaaji2-Regular.ttf');
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Start of the about page section*/
 
 /*This shapes the entriety of the about page*/
 #about-body {
   flex-direction: column;
-  font-family: 'BalooPaaji2';
   padding-bottom: 5rem;
   background-image:  linear-gradient(
     0deg,
@@ -53,7 +41,7 @@ body::-webkit-scrollbar {
 #about-header {
   margin-top: 4rem;
   margin-bottom: 0%;
-  font-family: 'LibreBodoni';
+  font-family: 'Libre Bodoni';
   font-style: bold;
   position: relative;
   background-image:  linear-gradient(
@@ -88,7 +76,7 @@ body::-webkit-scrollbar {
   padding-top: 0.2rem;
   margin-bottom: 0%;
   text-align: center;
-  font-family: 'LibreBodoni';
+  font-family: 'Libre Bodoni';
   font-style: normal;
 }
 
@@ -171,14 +159,6 @@ body::-webkit-scrollbar {
   transition: height 0.1s linear;
 }
 
-.display {
-  display: none;
-}
-
-.reveal {
-  display: block;
-}
-
 .closebutton {
   min-height: 44px;
 }
@@ -197,7 +177,6 @@ body::-webkit-scrollbar {
 
 .nav-links {
   margin: 0;
-  font-family: 'BalooPaaji2';
   font-size: 32px;
   list-style: none;
   display: flex;
@@ -262,7 +241,7 @@ body::-webkit-scrollbar {
 /* Home Section */
 #home-body {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .homebanner {
@@ -370,23 +349,58 @@ body::-webkit-scrollbar {
   background-image: url('../public/img/room.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   margin-top: 4rem;
   position: relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
-.welcomebox {
-  position: absolute;
-  top: 15%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  text-align: center;
-  background-color: white;
-  font-size: 24px;
-  box-shadow: 2px 4px rgba(0, 0, 0, 0.25);
+.description {
+  color: white;
+  font-family: 'Baloo Paaji 2';
+  font-size: 18px;
 }
+
+.description button {
+  border-radius: 15px;
+  padding: 0 4rem;
+  border: 1px solid black;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.description p {
+  width: 500px;
+  text-align: justify;
+}
+
+.left {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+}
+
+.right {
+  position: absolute;
+  bottom: 25%;
+  right: 5%;
+  text-align: right;
+}
+
+.scroller {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: 100vh;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
 
 /*This is the start of the FAQ css*/ 
 
@@ -394,14 +408,13 @@ body::-webkit-scrollbar {
 #faq-body {
   display: flex;
   flex-direction: column;
-  font-family: 'BalooPaaji2';
 }
 
 /* This designs the faq header*/
 #faq-header {
   margin-top: 4rem;
   color: white;
-  font-family: 'LibreBodoni';
+  font-family: 'Libre Bodoni';
   font-style: bold;
   position: relative;
   background-image:  linear-gradient(
@@ -422,7 +435,7 @@ body::-webkit-scrollbar {
 /*This designs the titles of the faq page (not header)*/
 .faq-titles {
   text-align: center;
-  font-family: 'LibreBodoni';
+  font-family: 'Libre Bodoni';
   font-style: normal;
 }
 
@@ -462,7 +475,6 @@ body::-webkit-scrollbar {
 }
 
 .footerContent p {
-  font-family: 'BalooPaaji2';
   font-size: 12px;
   margin: 0 1rem 0 0;
   text-align: right;
@@ -470,7 +482,6 @@ body::-webkit-scrollbar {
 }
 
 .footerContent h5 {
-  font-family: 'BalooPaaji2';
   text-align: right;
   margin: 0 1rem 0 0;
   font-weight: bold;
@@ -499,7 +510,6 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: baseline;
   margin-top: 4rem;
-  font-family: "BalooPaaji2";
   font-size: 0.92rem;
   background-image:  linear-gradient(
     0deg,
@@ -532,7 +542,7 @@ body::-webkit-scrollbar {
 /* Styling for title of size guide */
 #sizeguide-header {
   text-align: center;
-  font-family: 'LibreBodoni';
+  font-family: 'Libre Bodoni';
 }
 
 /* this gives the styling for the overall sizeguide table */
@@ -553,7 +563,6 @@ body::-webkit-scrollbar {
 /* Contact Section */
 .contactheader {
   text-align: center;
-  font-family: 'BalooPaaji2';
   margin-top: 1rem;
   font-size: 48px;
 }
@@ -743,6 +752,7 @@ body::-webkit-scrollbar {
   .footerBackground {
     background-image: url("/public/img/bigfooterback.png");
     background-size: 100vw 150px;
+    z-index: 0;
   }
 }
 

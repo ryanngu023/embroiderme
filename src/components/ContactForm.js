@@ -51,7 +51,8 @@ export default function ContactForm(props) {
         //         name: '',
         //         email: '',
         //         phonenum: '',
-        //         message: ''
+        //         message: '',
+        //         file: ''
         //     });
         //     setLoading(false);
         // }).catch(function(error) {

@@ -1,5 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import SortFilter from "../SortFilter.js";
+import { client } from "../../lib/client.js";
 
 export default function Shop(props) {
     const [sortOpen, setSortOpen] = useState(false);
@@ -7,6 +8,16 @@ export default function Shop(props) {
         event.preventDefault();
         setSortOpen(!sortOpen);
     };
+
+    useEffect(() => {
+        client.fetch('*[__type == "product"]', {})
+        .then(res => {
+            console.log("Post info: ", res)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }, [])
 
     return (
         <div className='contactbody'>

@@ -108,19 +108,52 @@ export function HomeMobile(props) {
 }
 
 export function HomeDesktop(props) {
+
     return (
-        <>
+        <div className='scroller'>
             <div className='desktopbanner'>
-                <div className='welcomebox'>
-                    <p>Welcome to Neko Needleworks</p>
+                <div className='description right'>
+                    <h2>Welcome to Neko Needleworks</h2>
+                    <p>A Shop aimed to fulfill your embroidery needs,
+                    hand-designed and crafted with passion, built
+                    with care and thought. Discover a world of quality crafts with unique and creative designs.</p>
                 </div>
             </div>
             <div className='desktopbanner'>
-                <div className='welcomebox'>
-                    <p>Welcome to Neko Needleworks</p>
+                <div className='description left'>
+                    <h2>Item Name</h2>
+                    <p>This  intricate design blah blah blah blah
+                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                    and yeah so yeah buy this This  intricate design blah blah blah blah
+                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                    and yeah so yeah buy this This  intricate design blah blah blah blah
+                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                    and yeah so yeah buy this </p>
+                    <button type='button'>Button Text</button>
                 </div>
             </div>
-        </>
+            <div className='desktopbanner'>
+            <div className='description right'>
+                    <h2>Item Name</h2>
+                    <p>This  intricate design blah blah blah blah
+                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                    and yeah so yeah buy this This  intricate design blah blah blah blah
+                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                    and yeah so yeah buy this This  intricate design blah blah blah blah
+                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                    and yeah so yeah buy this </p>
+                    <button type='button'>Button Text</button>
+                </div>
+            </div>
+            <div className='desktopbanner'>
+                <div className='text-center pt-5'>
+                    <h2 className='mt-5 text-white'>The All New "Chainsaw Man" Collab</h2>
+                    <img className='px-3' src='./img/sample.png' />
+                    <img className='px-3' src='./img/sample.png' />
+                    <img className='px-3' src='./img/sample.png' />
+                </div>
+            </div>
+        </div>
         
     )
 }
