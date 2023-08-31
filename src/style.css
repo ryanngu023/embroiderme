@@ -223,6 +223,7 @@ body::-webkit-scrollbar {
 
 .cart img {
   max-height: 44px;
+  padding: 0 1rem;
 }
 
 .homeLogo {
@@ -236,6 +237,33 @@ body::-webkit-scrollbar {
   max-height: 44px;
   position: relative;
   top: 1rem;
+}
+
+/* Navbar Desktop View */
+.desktoplogo {
+  background-color: white;
+  border-radius: 50%;
+  border: #333 solid 1px;
+  max-height: 60px;
+}
+
+.desktopnavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #FFD7E2;
+  display: none;
+}
+
+.desktopnavbar div h1 {
+  font-family: 'Baloo Paaji 2';
+  margin-bottom: 0;
+  height: 44px;
+  font-size: 30px;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 
 /* Home Section */
@@ -349,12 +377,10 @@ body::-webkit-scrollbar {
   background-image: url('../public/img/room.png');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   margin-top: 4rem;
   position: relative;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 .description {
@@ -370,22 +396,35 @@ body::-webkit-scrollbar {
   box-shadow: 0 4px rgba(0, 0, 0, 0.25);
 }
 
-.description p {
+.description p, .description h2 {
   width: 500px;
-  text-align: justify;
+  text-align: left;
 }
 
-.left {
+.leftcarousel {
   position: absolute;
-  bottom: 25%;
-  left: 5%;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 10rem;
+  text-align: left;
 }
 
 .right {
   position: absolute;
   bottom: 25%;
   right: 5%;
+}
+
+.rightcarousel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10rem;
   text-align: right;
+}
+
+.carouselimg {
+  height: 100vh;
 }
 
 .scroller {
@@ -682,7 +721,7 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 
-.helpform input, textarea {
+.helpform input, .helpform textarea {
   margin: 1rem 1rem auto 1rem;
   width: 90%;
   border: rgba(0, 0, 0, 0.5) solid 1px;
@@ -753,6 +792,30 @@ body::-webkit-scrollbar {
     background-image: url("/public/img/bigfooterback.png");
     background-size: 100vw 150px;
     z-index: 0;
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  .navLink {
+    padding: 0 1rem;
+    font-size: 1.25rem;
+  }
+
+  .cart img {
+    max-height: 36px;
+    padding: 0 0.25rem;
+  }
+
+  .navLink:hover {
+    color: white;
+  }
+
+  .desktopnavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 501;
   }
 }
 
@@ -776,5 +839,12 @@ body::-webkit-scrollbar {
 
   .helpform {
     font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navLink {
+    padding: 0 2rem;
+    font-size: 1.5rem;
   }
 }

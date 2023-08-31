@@ -27,8 +27,8 @@ export default function Home(props) {
 
     return (
         <div id = 'home-body'>
-            {screenSize.width <= 768 && <HomeMobile />}
-            {screenSize.width > 768 && <HomeDesktop />}
+            {screenSize.width < 768 && <HomeMobile />}
+            {screenSize.width >= 768 && <HomeDesktop />}
         </div>
     )
 }
@@ -108,9 +108,18 @@ export function HomeMobile(props) {
 }
 
 export function HomeDesktop(props) {
+    const [featuredIndex, setFeaturedIndex] = useState(0);
+    const [socialIndex, setSocialIndex] = useState(0);
+    const handleSelect = (selectedIndex, e) => {
+        setFeaturedIndex(selectedIndex);
+    };
+
+    const handleSwipe = (selectedIndex, e) => {
+        setSocialIndex(selectedIndex);
+    };
 
     return (
-        <div className='scroller'>
+        <div className='scroller mt-1'>
             <div className='desktopbanner'>
                 <div className='description right'>
                     <h2>Welcome to Neko Needleworks</h2>
@@ -119,32 +128,64 @@ export function HomeDesktop(props) {
                     with care and thought. Discover a world of quality crafts with unique and creative designs.</p>
                 </div>
             </div>
-            <div className='desktopbanner'>
-                <div className='description left'>
-                    <h2>Item Name</h2>
-                    <p>This  intricate design blah blah blah blah
-                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                    and yeah so yeah buy this This  intricate design blah blah blah blah
-                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                    and yeah so yeah buy this This  intricate design blah blah blah blah
-                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                    and yeah so yeah buy this </p>
-                    <button type='button'>Button Text</button>
-                </div>
-            </div>
-            <div className='desktopbanner'>
-            <div className='description right'>
-                    <h2>Item Name</h2>
-                    <p>This  intricate design blah blah blah blah
-                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                    and yeah so yeah buy this This  intricate design blah blah blah blah
-                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                    and yeah so yeah buy this This  intricate design blah blah blah blah
-                    fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                    and yeah so yeah buy this </p>
-                    <button type='button'>Button Text</button>
-                </div>
-            </div>
+            <Carousel className='w-100' activeIndex={featuredIndex} onSelect={handleSelect} interval={null} indicators={false}>
+                <Carousel.Item>
+                    <img className='w-100' src='./img/room.png' />
+                    <Carousel.Caption>
+                        <div className='description leftcarousel'>
+                            <h2>Item Name</h2>
+                            <p>This  intricate design blah blah blah blah
+                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                            and yeah so yeah buy this This  intricate design blah blah blah blah
+                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                            and yeah so yeah buy this This  intricate design blah blah blah blah
+                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                            and yeah so yeah buy this </p>
+                            <button type='button'>Button Text</button>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className='w-100' src='./img/room.png' />
+                    <Carousel.Caption>
+                        <div className='description leftcarousel'>
+                            <h2>Item Name</h2>
+                            <p>This  intricate design blah blah blah blah
+                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                            and yeah so yeah buy this This  intricate design blah blah blah blah
+                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                            and yeah so yeah buy this This  intricate design blah blah blah blah
+                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
+                            and yeah so yeah buy this </p>
+                            <button type='button'>Button Text</button>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+
+            <Carousel className='w-100' activeIndex={socialIndex} onSelect={handleSwipe} interval={null} indicators={false}>
+                <Carousel.Item>
+                    <img className='w-100 carouselimg' src='./img/instatemp.png' />
+                    <Carousel.Caption>
+                        <div className='description rightcarousel'>
+                            <h2>Instagram</h2>
+                            <p>Instagram is our preferred way to communicate, so check out our latest updates and arrivals
+                            by following our instagram @nekoneedleworks! </p>
+                            <button type='button'>Button Text</button>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img className='w-100 carouselimg' src='./img/room.png' />
+                    <Carousel.Caption>
+                        <div className='description rightcarousel'>
+                            <h2>Youtube</h2>
+                            <p>Youtube is one of the ways to get extra content of Neko Needleworks! Check out behind the scenes and never seen before footage on our youtube channel! </p>
+                            <button type='button'>Button Text</button>
+                        </div>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
             <div className='desktopbanner'>
                 <div className='text-center pt-5'>
                     <h2 className='mt-5 text-white'>The All New "Chainsaw Man" Collab</h2>
@@ -154,6 +195,6 @@ export function HomeDesktop(props) {
                 </div>
             </div>
         </div>
-        
+     
     )
 }
