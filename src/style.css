@@ -91,7 +91,7 @@ body::-webkit-scrollbar {
 #about-whomst-section {
   background-image: url("../public/img/about-pink-whomst.png");
   background-repeat: no-repeat;
-  background-size: 115%;
+  background-size: 100%;
 }
 
 /*This designs the sizing for Kiets picture*/
@@ -196,34 +196,16 @@ body::-webkit-scrollbar {
   color: black;
 }
 
-.navLink::before {
-  content: attr(data-text);
-  position: absolute;
-  color: white;
-  overflow: hidden;
-  width: 0%;
-  transition: 0.5s;
-}
-
-.navLink:hover::before {
-  width: 100%;
-}
-
 .hamburger {
   margin: 0 auto 0 1rem;
 }
 
-.hamburger img {
+.hamburger img, .cart img {
   max-height: 44px;
 }
 
 .cart {
   margin: 0 1rem 0 auto;
-}
-
-.cart img {
-  max-height: 44px;
-  padding: 0 1rem;
 }
 
 .homeLogo {

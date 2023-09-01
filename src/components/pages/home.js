@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import { NavLink } from "react-router-dom";
+import { urlFor } from "../../lib/client";
 
 
 export default function Home(props) {
@@ -28,7 +29,7 @@ export default function Home(props) {
     return (
         <div id = 'home-body'>
             {screenSize.width < 768 && <HomeMobile />}
-            {screenSize.width >= 768 && <HomeDesktop />}
+            {screenSize.width >= 768 && <HomeDesktop productData={props.productData} featuredData={props.featuredData} />}
         </div>
     )
 }
@@ -118,6 +119,27 @@ export function HomeDesktop(props) {
         setSocialIndex(selectedIndex);
     };
 
+    let mainItem = {
+        'bannerimage': './img/room.png',
+        'itemname': 'Temp Name',
+        'description': 'temp Description'
+    }
+
+    let subItemOne = {
+        'bannerimage': './img/room.png',
+        'itemname': 'Temp Name',
+        'description': 'temp Description'
+    }
+
+    let mainImageUrl = mainItem['bannerimage'];
+    let subItemOneImage = subItemOne['bannerimage'];
+    if(props.featuredData !== null) {
+        mainItem = props.featuredData[0];
+        subItemOne = props.featuredData[1];
+        mainImageUrl = urlFor(mainItem['bannerimage']);
+        subItemOneImage = urlFor(subItemOne['bannerimage']);
+    }
+
     return (
         <div className='scroller mt-1'>
             <div className='desktopbanner'>
@@ -130,33 +152,21 @@ export function HomeDesktop(props) {
             </div>
             <Carousel className='w-100' activeIndex={featuredIndex} onSelect={handleSelect} interval={null} indicators={false}>
                 <Carousel.Item>
-                    <img className='w-100' src='./img/room.png' />
+                    <img className='w-100 carouselimg' src={mainImageUrl} />
                     <Carousel.Caption>
                         <div className='description leftcarousel'>
-                            <h2>Item Name</h2>
-                            <p>This  intricate design blah blah blah blah
-                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                            and yeah so yeah buy this This  intricate design blah blah blah blah
-                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                            and yeah so yeah buy this This  intricate design blah blah blah blah
-                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                            and yeah so yeah buy this </p>
+                            <h2>{mainItem['itemname']}</h2>
+                            <p>{mainItem['description']}</p>
                             <button type='button'>Button Text</button>
                         </div>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                    <img className='w-100' src='./img/room.png' />
+                    <img className='w-100 carouselimg' src={subItemOneImage} />
                     <Carousel.Caption>
                         <div className='description leftcarousel'>
-                            <h2>Item Name</h2>
-                            <p>This  intricate design blah blah blah blah
-                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                            and yeah so yeah buy this This  intricate design blah blah blah blah
-                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                            and yeah so yeah buy this This  intricate design blah blah blah blah
-                            fill fill fill fill fill fill fill fill fill fill fill fill filkl
-                            and yeah so yeah buy this </p>
+                            <h2>{subItemOne['itemname']}</h2>
+                            <p>{subItemOne['description']}</p>
                             <button type='button'>Button Text</button>
                         </div>
                     </Carousel.Caption>

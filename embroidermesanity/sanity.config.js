@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'embroidermesanity',
 
-  projectId: 'zypqfv5f',
+  projectId: 'jyznfos3',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
