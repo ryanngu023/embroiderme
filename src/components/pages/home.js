@@ -28,8 +28,8 @@ export default function Home(props) {
 
     return (
         <div id = 'home-body'>
-            {screenSize.width < 768 && <HomeMobile />}
-            {screenSize.width >= 768 && <HomeDesktop productData={props.productData} featuredData={props.featuredData} />}
+            {screenSize.width < 768 && <HomeMobile galleryData={props.galleryData} />}
+            {screenSize.width >= 768 && <HomeDesktop productData={props.productData} featuredData={props.featuredData} galleryData={props.galleryData} />}
         </div>
     )
 }
@@ -44,6 +44,31 @@ export function HomeMobile(props) {
     const handleSwipe = (selectedIndex, e) => {
         setGalleryIndex(selectedIndex);
     };
+
+    let tempGallery = {
+        'image': './img/room.png',
+        'title': 'Temp Name',
+        'description': 'temp Description'
+    }
+
+    let galleryURLs = [tempGallery['image']];
+
+    let mobileGalleryItems = [tempGallery];
+    if(props.galleryData !== null) {
+        mobileGalleryItems = props.galleryData;
+        galleryURLs = mobileGalleryItems?.map((element) => {
+            return urlFor(element['image']);
+        })
+        
+    }
+
+    let mobileGalleryArray = mobileGalleryItems?.map((item, index) => {
+        return (
+            <Carousel.Item key={item['title']}>
+                <img className="d-block w-100" src={galleryURLs[index]}/>
+            </Carousel.Item>
+        )
+    })
 
     return (
         <div>
@@ -99,9 +124,7 @@ export function HomeMobile(props) {
                     <img src='./img/linediamondrev.png'/>
                 </div>
                 <Carousel className='gallery-carousel' activeIndex={galleryIndex} onSelect={handleSwipe}>
-                    <Carousel.Item>
-                        <img className="d-block w-100" src='./img/catgallery.png'/>
-                    </Carousel.Item>
+                    {mobileGalleryArray}
                 </Carousel>
             </div>
         </div>
@@ -111,6 +134,7 @@ export function HomeMobile(props) {
 export function HomeDesktop(props) {
     const [featuredIndex, setFeaturedIndex] = useState(0);
     const [socialIndex, setSocialIndex] = useState(0);
+    const [galleryDesktopIndex, setGalleryDesktopIndex] = useState(0);
     const handleSelect = (selectedIndex, e) => {
         setFeaturedIndex(selectedIndex);
     };
@@ -119,30 +143,77 @@ export function HomeDesktop(props) {
         setSocialIndex(selectedIndex);
     };
 
+    const handleGallerySwipe = (selectedIndex, e) => {
+        setGalleryDesktopIndex(selectedIndex);
+    }
+
     let mainItem = {
         'bannerimage': './img/room.png',
         'itemname': 'Temp Name',
         'description': 'temp Description'
     }
-
-    let subItemOne = {
-        'bannerimage': './img/room.png',
-        'itemname': 'Temp Name',
+    let tempItem = {
+        'image': './img/room.png',
+        'title': 'Temp Name',
         'description': 'temp Description'
     }
 
+    let featuredItems = [mainItem];
+    let galleryItems = [tempItem];
+
     let mainImageUrl = mainItem['bannerimage'];
-    let subItemOneImage = subItemOne['bannerimage'];
+    let tempItemImage = tempItem['image'];
+
+    let featuredImageURLs = [mainImageUrl];
+    let galleryImageURLs = [tempItemImage];
+
     if(props.featuredData !== null) {
-        mainItem = props.featuredData[0];
-        subItemOne = props.featuredData[1];
-        mainImageUrl = urlFor(mainItem['bannerimage']);
-        subItemOneImage = urlFor(subItemOne['bannerimage']);
+        featuredItems = props.featuredData;
+        featuredImageURLs = featuredItems?.map((element) => {
+            return urlFor(element['bannerimage']);
+        })
     }
+
+    let featuredArray = featuredItems?.map((item, index) => {
+        return (
+            <Carousel.Item key={item['itemname']}>
+                <img className='w-100 carouselimg' src={featuredImageURLs[index]} />
+                <Carousel.Caption>
+                    <div className='description leftcarousel'>
+                        <h2>{item['itemname']}</h2>
+                        <p>{item['description']}</p>
+                        <button type='button'>Button Text</button>
+                    </div>
+                </Carousel.Caption>
+            </Carousel.Item>
+        )
+    })
+
+    if(props.galleryData !== null) {
+        galleryItems = props.galleryData;
+        galleryImageURLs = galleryItems?.map((element) => {
+            return urlFor(element['image']);
+        })
+    }
+
+    let galleryArray = galleryItems?.map((item, index) => {
+        return (
+            <Carousel.Item key={item['title']}>
+                <img className='w-100 carouselimg' src={galleryImageURLs[index]} />
+                <Carousel.Caption>
+                    <div className='description leftcarousel'>
+                        <h2>{item['title']}</h2>
+                        <p>{item['description']}</p>
+                        <button type='button'>Button Text</button>
+                    </div>
+                </Carousel.Caption>
+            </Carousel.Item>
+        )
+    })
 
     return (
         <div className='scroller mt-1'>
-            <div className='desktopbanner'>
+            <div className='desktopbanner snap'>
                 <div className='description right'>
                     <h2>Welcome to Neko Needleworks</h2>
                     <p>A Shop aimed to fulfill your embroidery needs,
@@ -150,29 +221,13 @@ export function HomeDesktop(props) {
                     with care and thought. Discover a world of quality crafts with unique and creative designs.</p>
                 </div>
             </div>
+            <div className='snap'>
             <Carousel className='w-100' activeIndex={featuredIndex} onSelect={handleSelect} interval={null} indicators={false}>
-                <Carousel.Item>
-                    <img className='w-100 carouselimg' src={mainImageUrl} />
-                    <Carousel.Caption>
-                        <div className='description leftcarousel'>
-                            <h2>{mainItem['itemname']}</h2>
-                            <p>{mainItem['description']}</p>
-                            <button type='button'>Button Text</button>
-                        </div>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img className='w-100 carouselimg' src={subItemOneImage} />
-                    <Carousel.Caption>
-                        <div className='description leftcarousel'>
-                            <h2>{subItemOne['itemname']}</h2>
-                            <p>{subItemOne['description']}</p>
-                            <button type='button'>Button Text</button>
-                        </div>
-                    </Carousel.Caption>
-                </Carousel.Item>
+                {featuredArray}
             </Carousel>
+            </div>
 
+            <div className='snap'>
             <Carousel className='w-100' activeIndex={socialIndex} onSelect={handleSwipe} interval={null} indicators={false}>
                 <Carousel.Item>
                     <img className='w-100 carouselimg' src='./img/instatemp.png' />
@@ -196,13 +251,11 @@ export function HomeDesktop(props) {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-            <div className='desktopbanner'>
-                <div className='text-center pt-5'>
-                    <h2 className='mt-5 text-white'>The All New "Chainsaw Man" Collab</h2>
-                    <img className='px-3' src='./img/sample.png' />
-                    <img className='px-3' src='./img/sample.png' />
-                    <img className='px-3' src='./img/sample.png' />
-                </div>
+            </div>
+            <div className='snap'>
+                <Carousel className='w-100' activeIndex={galleryDesktopIndex} onSelect={handleGallerySwipe} interval={null} indicators={false}>
+                    {galleryArray}
+                </Carousel>
             </div>
         </div>
      

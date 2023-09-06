@@ -15,6 +15,7 @@ import { client } from "../lib/client.js";
 function App() {
   const [productData, setProductData] = useState(null);
   const [desktopFeatured, setDesktopFeatured] = useState(null);
+  const [galleryData, setGalleryData] = useState(null);
   const [errorType, setErrorType] = useState('');
   useEffect(() => {
       client.fetch('*[_type == "product"]')
@@ -23,12 +24,21 @@ function App() {
       })
       .catch(err => {
           console.log(err);
-          setErrorType(err.status);
+          setErrorType(err);
       })
+
       client.fetch('*[_type == "desktopfeatured"]')
       .then(res => {
-        console.log(res);
         setDesktopFeatured(res);
+      })
+      .catch(err => {
+        console.log(err);
+        setErrorType(err);
+      })
+
+      client.fetch('*[_type == "gallery"]')
+      .then(result => {
+        setGalleryData(result);
       })
       .catch(err => {
         console.log(err);
@@ -45,7 +55,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route index element={<Home productData={productData} featuredData={desktopFeatured} />} />
+          <Route index element={<Home productData={productData} featuredData={desktopFeatured} galleryData={galleryData} />} />
           <Route path="about" element={<About />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="sizeguide" element={<SizeGuide />} />
