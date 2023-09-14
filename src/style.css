@@ -418,23 +418,6 @@ body::-webkit-scrollbar {
   margin-bottom: 9rem;
 }
 
-/* This does the paragraph styling for the faq ordering and shipping*/
-#faq-OS-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  text-align: center;
-  font-size: 0.85rem;
-} 
-
-/*This designs the custom service section of the faq page*/
-#faq-custom-section {
-  background-color: #D1C3B7;
-  background-color: #D7F5D3;
-  padding: 1rem;
-}
 
 /* Footer Section FS1 */
 
@@ -1061,8 +1044,18 @@ body::-webkit-scrollbar {
 
 @media (min-width: 992px) {
   #faq-content {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-bottom: 80px;
+  }
+
+  .faq-questions-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .faq-large-col {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
   }
 
   #faq-header {
@@ -1081,24 +1074,6 @@ body::-webkit-scrollbar {
   p, a, li {
     font-size: 20px;
   }
-}
-
-/* This does the paragraph styling for the faq ordering and shipping*/
-#faq-OS-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  text-align: center;
-  font-size: 0.85rem;
-} 
-
-/*This designs the custom service section of the faq page*/
-#faq-custom-section {
-  background-color: #D1C3B7;
-  background-color: #D7F5D3;
-  padding: 1rem;
 }
 
 /* Footer Section */
