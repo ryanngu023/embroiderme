@@ -23,12 +23,15 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 /* Start of the about page section*/
 
 /*This shapes the entriety of the about page*/
 #about-body {
   flex-direction: column;
-  padding-bottom: 5rem;
   background-image:  linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.5),
@@ -82,6 +85,7 @@ body::-webkit-scrollbar {
 
 /*This section is about info with keit */
 #about-kiet-info {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -99,12 +103,12 @@ body::-webkit-scrollbar {
   height: 6rem;
   border-radius: 100%;
   margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 /*This is the styling for the paragraph sections*/
 .about-info-sections {
   margin: 1rem;
-  text-align: center;
   font-size: 0.8rem;
 }
 
@@ -114,6 +118,32 @@ body::-webkit-scrollbar {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+.serviceimg {
+  width: 40%;
+}
+
+.service-body p {
+  width: 75%;
+}
+
+.meet-team-section {
+  background-color: #FFE1EC;
+  padding-bottom: 10rem;
+}
+
+.circle {
+  height: 100px;
+  width: 100px;
+  background-color: #DAF0F7;
+  border-radius: 50%;
+  margin: 1rem;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.circle p {
+  margin: 2.5rem auto;
 }
 
 /* Navbar section */
@@ -595,7 +625,7 @@ body::-webkit-scrollbar {
 }
 
 .contactbody {
-  padding: 4rem 0 3rem 0;
+  padding-top: 3.6rem;
   height: 100%;
 }
 
@@ -747,6 +777,27 @@ body::-webkit-scrollbar {
   padding: 0.5rem 0 0 1rem;
 }
 
+.desktopsort {
+  height: 100vh;
+  width: 20%;
+  margin: 0;
+  position: fixed;
+  z-index: 0;
+  background-color: #F5D6D6;
+}
+
+.searchbar input {
+  width: 80%;
+  margin: 1rem auto;
+  border: 1px solid black;
+  border-radius: 0;
+  box-shadow: 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.filters input, .pricesort input {
+  margin: 0 0.5rem 0 2rem;
+}
+
 .filtersidebar {
   margin-top: 3rem;
   position: fixed;
@@ -773,6 +824,16 @@ body::-webkit-scrollbar {
 
 .bottomtext p {
   margin: 0;
+}
+
+.itemlist {
+  width: 100%;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+.productimage {
+  width: 100%;
 }
 
 @media (min-width: 576px) {
@@ -810,6 +871,34 @@ body::-webkit-scrollbar {
     justify-content: center;
     z-index: 501;
   }
+
+  .shopitem {
+    width: 15rem;
+  }
+
+  .itemtext {
+    font-size: 24px;
+  }
+
+  #about-kiet-pic {
+    border-radius: 15px;
+    height: 40%;
+    width: 40%;
+  }
+
+  #about-kiet-info {
+    justify-content: space-between;
+  }
+
+  .about-info-sections {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  .itemlist {
+    margin-left: 20%;
+    width: 80%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -832,6 +921,40 @@ body::-webkit-scrollbar {
 
   .helpform {
     font-size: 24px;
+  }
+
+  .shopitem {
+    width: 22%;
+    height: 500px;
+  }
+  
+  .itemtext {
+    padding: 0.5rem 2rem;
+  }
+
+  .productimage {
+    height: 350px;
+  }
+
+  #about-kiet-pic {
+    margin-left: 5rem;
+    width: 60%;
+  }
+
+  #about-whomst-section {
+    padding-top: 1rem;
+  }
+
+  .about-info-sections {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  .service-body p {
+    width: 50%;
+    line-height: 2;
+    text-align: center;
+    font-size: 25px;
   }
 }
 
