@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
 #about-header {
   margin-top: 4rem;
   margin-bottom: 0%;
-  font-family: 'LibreBodoni';
+  font-family: 'BalooPaaji2';
   font-style: bold;
   position: relative;
   background-image:  linear-gradient(
@@ -88,7 +88,7 @@ body::-webkit-scrollbar {
   padding-top: 0.2rem;
   margin-bottom: 0%;
   text-align: center;
-  font-family: 'LibreBodoni';
+  font-family: 'BalooPaaji2';
   font-style: normal;
 }
 
@@ -372,13 +372,14 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   font-family: 'BalooPaaji2';
+  width: auto;
 }
 
 /* This designs the faq header*/
 #faq-header {
   margin-top: 4rem;
   color: white;
-  font-family: 'LibreBodoni';
+  font-family: 'BalooPaaji2';
   font-style: bold;
   position: relative;
   background-image:  linear-gradient(
@@ -397,10 +398,24 @@ body::-webkit-scrollbar {
 }
 
 /*This designs the titles of the faq page (not header)*/
-.faq-titles {
-  text-align: center;
-  font-family: 'LibreBodoni';
-  font-style: normal;
+.faq-section-titles {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#faq-content {
+  margin: 1rem;
+}
+
+.faq-questions {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 0.25rem
+}
+
+#faq-page-end {
+  margin-bottom: 9rem;
 }
 
 /* This does the paragraph styling for the faq ordering and shipping*/
@@ -509,7 +524,7 @@ body::-webkit-scrollbar {
 /* Styling for title of size guide */
 #sizeguide-header {
   text-align: center;
-  font-family: 'LibreBodoni';
+  font-family: 'Baloopajii2';
 }
 
 /* this gives the styling for the overall sizeguide table */
@@ -998,8 +1013,9 @@ body::-webkit-scrollbar {
 #faq-header {
   margin-top: 4rem;
   color: white;
-  font-family: 'LibreBodoni';
-  font-style: bold;
+  font-family: 'BalooPaaji2';
+  font-size: 1.7rem;
+  font-style: bolder;
   position: relative;
   background-image:  linear-gradient(
     0deg,
@@ -1014,6 +1030,7 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   height: 13rem;
+  width: 100%;
 }
 
 /*This designs the titles of the faq page (not header)*/
@@ -1021,6 +1038,49 @@ body::-webkit-scrollbar {
   text-align: center;
   font-family: 'BalooPaaji2';
   font-style: bolder;
+}
+
+/* This designs the table of contents header */
+#faq-table-header {
+  text-align: center;
+}
+
+
+#faq-table-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.faq-table-col {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  #faq-content {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  #faq-header {
+    font-size: 60px;
+    height: 18rem;
+  }
+
+  .faq-section-titles {
+    font-size: 30px;
+  }
+
+  .faq-questions {
+    font-size: 25px;
+  }
+
+  p, a, li {
+    font-size: 20px;
+  }
 }
 
 /* This does the paragraph styling for the faq ordering and shipping*/
@@ -1129,7 +1189,8 @@ body::-webkit-scrollbar {
 /* Styling for title of size guide */
 #sizeguide-header {
   text-align: center;
-  font-family: 'LibreBodoni';
+  font-family: 'BalooPaaji2';
+  font-weight: bolder;
 }
 
 /* this gives the styling for the overall sizeguide table */
