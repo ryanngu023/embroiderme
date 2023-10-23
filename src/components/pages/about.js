@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import kietPic from '../pictures/kiet_linkedin.jpg';
+import kietPic from '../pictures/kiet.jpg';
 import largeLeftArrow from '../pictures/arrows/longArrowDiamondLeft.png';
 import largeRightArrow from '../pictures/arrows/longArrowDiamondRight.png';
 import smallLeftArrow from '../pictures/arrows/shortArrowDiamondLeft.png';
