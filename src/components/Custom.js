@@ -18,11 +18,11 @@ export default function Custom(props) {
                         <p>(1)</p>
                         <p>You send the product design below, and I will confirm with you via email if it’s possible to create or not.</p>
                     </div>
-                    <img src='/img/Footer Logo.png' alt='Process of sending product design through form' />
+                    <img src='/img/mangodesignevelope.png' alt='Process of sending product design through form' />
                 </div>
 
                 <div>                    
-                    <img src='/img/Footer Logo.png' alt='Process of sending product design through form' />
+                    <img src='/img/4.png' alt='Process of sending product design through form' />
                     <div>
                         <p>(2)</p>
                         <p>Talk thru email / zoom call (20 minute max)</p>
@@ -34,11 +34,11 @@ export default function Custom(props) {
                         <p>(3)</p>
                         <p>We will create one free visual sample based on your request. if the customer likes it, then they can pay the price of the product.</p>
                     </div>
-                    <img src='/img/Footer Logo.png' alt='Process of sending product design through form' />
+                    <img src='/img/4.png' alt='Process of sending product design through form' />
                 </div>
 
                 <div>                    
-                    <img src='/img/Footer Logo.png' alt='Process of sending product design through form' />
+                    <img src='/img/11.png' alt='Process of sending product design through form' />
                     <div>
                         <p>(4)</p>
                         <p>We will revise the product until finalization.</p>
@@ -50,11 +50,11 @@ export default function Custom(props) {
                         <p>(5)</p>
                         <p>Product gets shipped out! :D</p>
                     </div>
-                    <img src='/img/Footer Logo.png' alt='Process of sending product design through form' />
+                    <img src='/img/8.png' alt='Process of sending product design through form' />
                 </div>
 
                 <div>                    
-                    <img src='/img/Footer Logo.png' alt='Process of sending product design through form' />
+                    <img src='/img/12.png' alt='Process of sending product design through form' />
                     <div>
                         <p>(6)</p>
                         <p>Customer received product. is happy. leaves a positive review on the website.</p>

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import { NavLink } from "react-router-dom";
 
-import logoKitties from '../components/pictures/kitties/hajinKitties.png';
+import logoKitties from '../components/pictures/kitties/logo.jpg';
 
 export default function Navbar(props) {
     const [menuState, setMenuState] = useState(false);
